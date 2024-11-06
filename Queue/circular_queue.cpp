@@ -12,7 +12,10 @@ void insert(){
 	p=r;
 	r=(r+1)%n;
 	if(r==f)
-		cout<<"Queue is full"<<endl;
+	{
+    cout<<"Queue is full"<<endl;
+    r=p;
+    }
 	else{
 		cout<<"Enter a number: ";
 		cin>>cq[r];
