@@ -168,6 +168,44 @@ public:
         temp->link = newNode;
         size++;
     }
+    void deleteAtPos(int x)
+    {
+        int done = 0;
+        if (isEmpty())
+        {
+            cout << "linked list is Empty() " << endl;
+            return;
+        }
+        else if (start->data == x)
+        {
+            Node *temp = start;
+            start = start->link;
+            temp->link = NULL;
+            delete temp;
+            size--;
+        }
+        else
+        {
+            for (Node *p = start; p->link != NULL; p = p->link)
+            {
+                if (p->link->data == x)
+                {
+                    Node *temp = p->link;
+                    p->link = p->link->link;
+                    temp->link = NULL;
+                    delete temp;
+                    size--;
+                    cout << "Deleted successfully." << endl;
+                    done++;
+                    break;
+                }
+            }
+        }
+        if(done==0)
+        {
+            cout<<"Node does`nt found! "<<endl;
+        }
+    }
     ~list()
     {
         cout << "~List()\n";
@@ -181,13 +219,15 @@ public:
 int main()
 {
     list l;
-    l.insertAthead(8);
-    l.insertAthead(7);
-    l.insertAthead(6);
     l.insertAthead(5);
-    l.insertAtTail(9);
-    l.insertAtTail(10);
-    l.insertAtTail(11);
+    l.insertAthead(10);
+    l.insertAthead(15);
+    l.insertAtTail(20);
+    l.insertAtTail(25);
+    l.insertAtTail(30);
+    l.deleteAtPos(15);
+    l.deleteAtPos(25);
+    l.print();
     l.insertAtPosition(200, 7);
     l.print();
     l.pop_front();
