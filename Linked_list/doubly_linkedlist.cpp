@@ -114,7 +114,7 @@ int main()
    l1.display();
    l1.insertAtPostion(14,5);
    l1.display();
-   l1.deleteHead();
+   l1.deleteAtHead();
    l1.display();
 
    
