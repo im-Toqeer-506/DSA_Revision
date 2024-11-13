@@ -96,7 +96,39 @@ class d_list{
         free(temp);
         return;
     }
-    
+    void DeleteAtEnd()
+    {
+        if(head==NULL)
+        {
+            return;
+        }
+        Node* temp=tail;
+        tail=tail->prev;
+        if(tail==NULL)
+        {
+            head=NULL;
+        }
+        else
+        {
+            tail->next=NULL;
+        }
+        free(temp);
+        return;
+    }
+    void DeleteAtPosition(int k)
+    {
+        Node*temp=head;
+        int counter=0;
+        while(counter<k)
+        {
+        temp=temp->next;
+        counter++;
+        }
+        temp->prev->next=temp->next;
+        temp->next->prev=temp->prev;
+        free(temp);
+        return;
+    }
 };
 int main()
 {
@@ -116,8 +148,8 @@ int main()
    l1.display();
    l1.deleteAtHead();
    l1.display();
-
-   
+   l1.DeleteAtEnd();
+   l1.display();
+   l1.DeleteAtPosition(2);
+   l1.display(); 
 } 
-
-
