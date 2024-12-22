@@ -1,0 +1,21 @@
+Parenthesis("", os=0, cs=0)
+├── Parenthesis("(", os=1, cs=0)
+│   ├── Parenthesis("((", os=2, cs=0)
+│   │   ├── Parenthesis("(((", os=3, cs=0)
+│   │   │   ├── Parenthesis("((()", os=3, cs=1)
+│   │   │   │   ├── Parenthesis("((())", os=3, cs=2)
+│   │   │   │   │   ├── Parenthesis("((()))", os=3, cs=3) [Base Case]
+│   │   ├── Parenthesis("(()", os=2, cs=1)
+│   │   │   ├── Parenthesis("(()(", os=3, cs=1)
+│   │   │   │   ├── Parenthesis("(()()", os=3, cs=2)
+│   │   │   │   │   ├── Parenthesis("(()())", os=3, cs=3) [Base Case]
+│   │   │   ├── Parenthesis("(())", os=2, cs=2)
+│   │   │   │   ├── Parenthesis("(())(", os=3, cs=2)
+│   │   │   │   │   ├── Parenthesis("(())()", os=3, cs=3) [Base Case]
+│   ├── Parenthesis("()", os=1, cs=1)
+│   │   ├── Parenthesis("()((", os=2, cs=1)
+│   │   │   ├── Parenthesis("()(()", os=3, cs=1)
+│   │   │   │   ├── Parenthesis("()(())", os=3, cs=3) [Base Case]
+│   │   ├── Parenthesis("()()", os=2, cs=2)
+│   │   │   ├── Parenthesis("()()(", os=3, cs=2)
+│   │   │   │   ├── Parenthesis("()()()", os=3, cs=3) [Base Case]
