@@ -47,8 +47,7 @@ public:
             {
                 node->Put(word[i], new Node());
             }
-            node = node->get(word[i]); // Corrected this line
-        }
+            node = node->get(word[i]);}
         node->setEnd();
     }
 
@@ -87,7 +86,6 @@ int main()
     trie.insert("apple");
     trie.insert("applet");
     trie.insert("appneeto");
-
     cout << trie.search("apple") << endl;
     cout << trie.search("app") << endl;
     cout << trie.startsWith("app") << endl;
