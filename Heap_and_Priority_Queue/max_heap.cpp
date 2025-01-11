@@ -2,22 +2,14 @@
 using namespace std;
 class Heap
 {
-public:
     int arr[100];
     int size;
-    Heap(){
-        size=0;
-        arr[0]=-1;
-    }
 
-    void print()
+public:
+    Heap()
     {
-        for (int i = 0; i < size; i++)
-        {
-           cout<<arr[i]<<" ";
-        }
-        cout<<"\n";
-        return;
+        size = 0;
+        arr[0] = -1;
     }
     void insert(int val)
     {
@@ -43,11 +35,12 @@ public:
     {
         if (size == 0)
         {
-            cout<<"there is nothing to delete!";
+            cout << "there is nothing to delete!";
             return;
         }
         int i = 1;
         arr[i] = arr[size];
+        size--;
         while (i < size)
         {
             int leftIndex = 2 * i;
@@ -68,16 +61,26 @@ public:
             }
         }
     }
+    void print()
+    {
+        for (int i = 1; i <=size; i++)
+        {
+            cout << arr[i] << " ";
+        }
+        cout << "\n";
+        return;
+    }
 };
 int main()
 {
     Heap h1;
-    h1.insert(34);
-    h1.insert(23);
-    h1.insert(56);
-    h1.insert(76);
-    h1.insert(21);
-    h1.insert(90);
-    h1.insert(34);
+    h1.insert(50);
+    h1.insert(55);
+    h1.insert(53);
+    h1.insert(52);
+    h1.insert(54);
     h1.print();
+    h1.Delete();
+    h1.print();
+   
 }
