@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 class Heap
 {
@@ -63,7 +63,7 @@ public:
     }
     void print()
     {
-        for (int i = 1; i <=size; i++)
+        for (int i = 1; i <= size; i++)
         {
             cout << arr[i] << " ";
         }
@@ -73,6 +73,7 @@ public:
 };
 int main()
 {
+    cout << "All About the Heap(insert,delete)" << endl;
     Heap h1;
     h1.insert(50);
     h1.insert(55);
@@ -82,5 +83,4 @@ int main()
     h1.print();
     h1.Delete();
     h1.print();
-   
 }
