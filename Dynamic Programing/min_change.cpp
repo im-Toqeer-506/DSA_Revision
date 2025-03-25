@@ -31,3 +31,5 @@ int main() {
 
     return 0;
 }
+// Time Complexity: O(n * m) where n is the amount and m is the number of coins
+// Space Complexity: O(n) where n is the amount
