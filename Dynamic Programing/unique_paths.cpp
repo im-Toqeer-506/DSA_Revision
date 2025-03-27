@@ -27,3 +27,5 @@ int main() {
     cout << "Number of paths: " << countPaths(0, 0, grid, memo) << endl;
     return 0;
 }
+// Time Complexity: O(m * n)
+// Space Complexity: O(m * n)   m = rows, n = cols
